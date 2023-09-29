@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Fjalla+One&family=Lobster&family=Oswald:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #f447e2, #4e3fed, #39eafa);
+    background-size: 400% 400%;
+    animation: gradient-bg 10s ease infinite;
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+.head {
+    margin-bottom: 4%;
+    margin-top: -15%;
+    font-family: 'Lobster', cursive;
+    color: snow;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.input input[type=number] {
+    border-radius: 5px;
+    width: 30vw;
+    height: 38px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: 0.2px solid black;
+    background: linear-gradient(-45deg, #f447e2, #74efff, #9c27b0);
+    box-shadow: 2px 2px 4px cyan;
+}
+
+.anim-bg-gradient {
+    border: 0.5px solid black;
+    padding: 0.7em 1.2em;
+    border-radius: 0.375em;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(120deg, darkmagenta, rgb(235, 39, 212), rgb(18, 232, 240));
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    font-family: 'Fira Sans', sans-serif;
+    transition: background-position 0.5s;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.anim-bg-gradient:hover {
+    background-position: 0 0;
+}
+
+.table {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 15px 5px;
+    display: flex;
+    width: 35vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3px;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient( from var(--border-angle), #213, darkblue 50%, cyan), conic-gradient(from var(--border-angle), transparent 20%, rgb(96, 218, 255), #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+&:hover {
+    animation-play-state: paused;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.box {
+    font-family: 'Fira Sans', sans-serif;
+    border: 0.5px solid snow;
+    color: snow;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box1 {
+    width: 7vw;
+}
+
+.box5 {
+    width: 13vw;
+}
+
+.box2,
+.box3,
+.box4 {
+    width: 4vw;
+}
+
+@media screen and (max-width:500px) {
+    .box {
+        flex-basis: 15%;
+    }
+    .table {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .table {
+        width: 65vw;
+    }
+    .box {
+        flex-basis: 18%;
+    }
+}
