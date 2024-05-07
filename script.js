@@ -11,7 +11,7 @@ inputs.addEventListener("submit", (e) => {
     if (values == "") {
         alert("Please enter a valid number.");
     }
-
+table.innerHTML = ""
     for (let i = 1; i <= 10; i++) {
         let numbers = values * i;
 
