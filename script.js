@@ -17,9 +17,9 @@ table.innerHTML = ""
 
         table.innerHTML += `
             <div class="box box1">${values}</div>
-            <div class="box box2">=</div>
+            <div class="box box2">x</div>
             <div class="box box3">${i}</div>
-            <div class="box box4">x</div>
+            <div class="box box4">=</div>
             <div class="box box5">${numbers}</div>
             `
     }
